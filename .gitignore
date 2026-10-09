@@ -1,0 +1,15 @@
+# Environnements Python (très lourds)
+.venv/
+__pycache__/
+
+# Dépendances JavaScript (plus tard)
+node_modules/
+
+# Secrets
+serviceAccount.json
+.env
+
+# Enregistrements audio
+*.m4a
+*.wav
+*.mp3

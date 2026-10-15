@@ -8,6 +8,7 @@ import os
 import tempfile
 
 from fastapi import FastAPI, File, Form, HTTPException, Request, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -23,6 +24,14 @@ app = FastAPI(
     title="OpenPronounce",
     description="Phoneme-level pronunciation assessment (Wav2Vec2 + DTW). English by default, see /languages.",
     version=__version__,
+)
+# CORS : autorise l'application tablette (Learning/app, servie par Vite sur un autre port)
+# à appeler l'API depuis le navigateur, en local ou depuis le réseau Wi-Fi de l'école.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origin_regex=r"https?://(localhost|127\.0\.0\.1|192\.168\.\d+\.\d+|10\.\d+\.\d+\.\d+)(:\d+)?",
+    allow_methods=["GET", "POST"],
+    allow_headers=["*"],
 )
 app.mount("/static", StaticFiles(directory=os.path.join(BASE_DIR, "static")), name="static")
 templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "templates"))

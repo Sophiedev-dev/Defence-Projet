@@ -1,0 +1,74 @@
+/* Styles communs, repris du design « Lecture Guidée Tablette ».
+   Couleurs principales :
+     #23305E bleu nuit (texte, boutons sombres)
+     #FFF7E8 crème (fond)
+     #FFC23D jaune (écouter / aide)
+     #F2664A corail (micro, action principale)
+     #2FA36B vert (suivant) */
+
+html, body, #root { margin: 0; height: 100%; }
+body {
+  background: #FFF7E8;
+  overflow: hidden;
+  font-family: 'Fredoka', system-ui, sans-serif;
+  color: #23305E;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+* { box-sizing: border-box; }
+button { font: inherit; }
+
+@keyframes pulse { 0% { transform: scale(1); opacity: .5 } 100% { transform: scale(1.9); opacity: 0 } }
+@keyframes bounce { 0%, 80%, 100% { transform: translateY(0) } 40% { transform: translateY(-30px) } }
+@keyframes wave { 0%, 100% { transform: scaleY(.25) } 50% { transform: scaleY(1) } }
+@keyframes load { from { width: 0 } to { width: 100% } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: none } }
+@keyframes pop { 0% { transform: scale(0) rotate(-40deg) } 70% { transform: scale(1.25) rotate(8deg) } 100% { transform: scale(1) } }
+
+/* ---------- Cadre : la maquette fait 1280×800, on l'agrandit / réduit
+   pour remplir l'écran de la tablette sans la déformer. ---------- */
+.cadre-ext { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.cadre { position: relative; width: 1280px; height: 800px; overflow: hidden; background: #FFF7E8; }
+
+/* ---------- Boutons « en relief » : ombre dessous, s'enfoncent au toucher ---------- */
+.btn { border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #23305E; }
+.btn:disabled { cursor: default; }
+
+/* Bouton rond jaune « haut-parleur » (aide / consigne) */
+.btn-aide { width: 64px; height: 64px; border-radius: 50%; background: #FFC23D; box-shadow: 0 5px 0 #D99A12; flex: none; }
+.btn-aide:active { transform: translateY(4px); box-shadow: 0 1px 0 #D99A12; }
+
+/* Bouton rond blanc « retour » */
+.btn-retour { width: 64px; height: 64px; border-radius: 50%; background: #fff; box-shadow: 0 4px 0 #EADFC8; flex: none; }
+.btn-retour:active { transform: translateY(3px); box-shadow: 0 1px 0 #EADFC8; }
+
+/* Carte blanche cliquable (niveaux, matières, unités) */
+.carte { border: none; background: #fff; cursor: pointer; color: #23305E; box-shadow: 0 6px 0 #EADFC8; text-align: left; }
+.carte:active { transform: translateY(5px); box-shadow: 0 1px 0 #EADFC8; }
+
+/* Bouton jaune « Écouter » */
+.btn-ecouter { height: 76px; padding: 0 30px 0 22px; border-radius: 38px; background: #FFC23D; font-weight: 600; font-size: 26px; gap: 12px; box-shadow: 0 5px 0 #D99A12; }
+.btn-ecouter:active { transform: translateY(4px); box-shadow: 0 1px 0 #D99A12; }
+
+/* Bouton blanc secondaire (même taille que « Écouter ») */
+.btn-blanc { height: 76px; padding: 0 26px 0 20px; border-radius: 38px; background: #fff; font-weight: 600; font-size: 24px; gap: 10px; box-shadow: 0 5px 0 #EADFC8; }
+.btn-blanc:active { transform: translateY(4px); box-shadow: 0 1px 0 #EADFC8; }
+
+/* Gros micro corail */
+.btn-micro { width: 124px; height: 124px; border-radius: 50%; background: #F2664A; color: #fff; box-shadow: 0 8px 0 #C9472E, 0 0 0 10px #FDE3DC; }
+.btn-micro:active { transform: translateY(6px); box-shadow: 0 2px 0 #C9472E, 0 0 0 10px #FDE3DC; }
+
+/* Micro plus petit « Relire » */
+.btn-relire { width: 104px; height: 104px; border-radius: 50%; background: #F2664A; color: #fff; box-shadow: 0 7px 0 #C9472E; }
+.btn-relire:active { transform: translateY(5px); box-shadow: 0 2px 0 #C9472E; }
+
+/* Bouton vert « Suivant » */
+.btn-suivant { height: 80px; padding: 0 26px 0 34px; border-radius: 40px; background: #2FA36B; color: #fff; font-weight: 600; font-size: 28px; gap: 12px; box-shadow: 0 6px 0 #1F7A4E; }
+.btn-suivant:active { transform: translateY(5px); box-shadow: 0 1px 0 #1F7A4E; }
+
+/* Bouton rond blanc (écran précédent) */
+.btn-rond { width: 80px; height: 80px; border-radius: 50%; background: #fff; box-shadow: 0 5px 0 #EADFC8; }
+.btn-rond:active { transform: translateY(4px); box-shadow: 0 1px 0 #EADFC8; }
+
+/* Petit bouton rond crème « écouter cette phrase » */
+.btn-phrase { flex: none; width: 52px; height: 52px; border-radius: 50%; background: #FFF0C9; }

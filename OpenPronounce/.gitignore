@@ -14,3 +14,9 @@ test_env
 .env
 .env.*
 .claude/
+
+# --- import-contenu ---
+import-contenu/serviceAccount.json
+import-contenu/.venv/
+import-contenu/audio/
+import-contenu/contenu_prepare.json

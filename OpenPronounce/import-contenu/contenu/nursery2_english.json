@@ -1,0 +1,92 @@
+[
+  {
+    "level": "Nursery 2",
+    "unit_id": "unit_01_school",
+    "unit_title": "At School: Sounds and Friends",
+    "screen_number": 1,
+    "block_type": "paragraph",
+    "expected_text": "S is for school. S is for sun.",
+    "visual_description": "A bright classroom with a smiling teacher, children sitting at desks, and a big sun shining through the window. The letter 'S' is on the chalkboard.",
+    "audio_instruction": "Listen and read aloud. Can you say S?"
+  },
+  {
+    "level": "Nursery 2",
+    "unit_id": "unit_01_school",
+    "unit_title": "At School: Sounds and Friends",
+    "screen_number": 2,
+    "block_type": "paragraph",
+    "expected_text": "Sam sits on a chair. The sun is up.",
+    "visual_description": "A boy named Sam sitting on a wooden chair in the classroom, with the sun shining in from the window. Other children are nearby.",
+    "audio_instruction": "Read with me. Point to Sam and the sun."
+  },
+  {
+    "level": "Nursery 2",
+    "unit_id": "unit_01_school",
+    "unit_title": "At School: Sounds and Friends",
+    "screen_number": 3,
+    "block_type": "paragraph",
+    "expected_text": "Sam says, \"Good morning!\" Friends clap and smile.",
+    "visual_description": "Sam standing and waving, saying 'Good morning!' to his friends. The children are clapping and smiling. The teacher is happy.",
+    "audio_instruction": "Say 'Good morning!' to your friends. Can you clap too?"
+  },
+  {
+    "level": "Nursery 2",
+    "unit_id": "unit_02_kitchen",
+    "unit_title": "In the Kitchen: Family and Food",
+    "screen_number": 1,
+    "block_type": "paragraph",
+    "expected_text": "Mum has a pot. Dad has a cup.",
+    "visual_description": "A simple kitchen with a mother holding a pot and a father holding a cup. There are local foods like plantains and yams on a table.",
+    "audio_instruction": "Listen and read. Can you find the pot and cup?"
+  },
+  {
+    "level": "Nursery 2",
+    "unit_id": "unit_02_kitchen",
+    "unit_title": "In the Kitchen: Family and Food",
+    "screen_number": 2,
+    "block_type": "paragraph",
+    "expected_text": "Mum cooks food. Dad drinks tea.",
+    "visual_description": "Mum stirring a pot on a charcoal stove, Dad sipping tea from a cup. A child watches with a smile.",
+    "audio_instruction": "Read after me. What is Mum doing? What is Dad doing?"
+  },
+  {
+    "level": "Nursery 2",
+    "unit_id": "unit_02_kitchen",
+    "unit_title": "In the Kitchen: Family and Food",
+    "screen_number": 3,
+    "block_type": "paragraph",
+    "expected_text": "We eat yam and drink water. We say, \"Thank you, Mum!\"",
+    "visual_description": "Children sitting at a small table eating yam and drinking water. Mum is smiling. The children are saying 'Thank you, Mum!'",
+    "audio_instruction": "Say 'Thank you, Mum!' Can you name the food?"
+  },
+  {
+    "level": "Nursery 2",
+    "unit_id": "unit_03_fruit",
+    "unit_title": "Fruits We Love: Colours and Tastes",
+    "screen_number": 1,
+    "block_type": "paragraph",
+    "expected_text": "This is a mango. It is yellow.",
+    "visual_description": "A close-up of a ripe yellow mango on a table, with a child pointing at it. There are other fruits in the background.",
+    "audio_instruction": "Listen and repeat. What colour is the mango?"
+  },
+  {
+    "level": "Nursery 2",
+    "unit_id": "unit_03_fruit",
+    "unit_title": "Fruits We Love: Colours and Tastes",
+    "screen_number": 2,
+    "block_type": "paragraph",
+    "expected_text": "Ada eats a sweet banana. She smiles.",
+    "visual_description": "A girl named Ada holding and eating a banana, smiling happily. A bunch of bananas is on the table.",
+    "audio_instruction": "Read with me. Can you smile like Ada?"
+  },
+  {
+    "level": "Nursery 2",
+    "unit_id": "unit_03_fruit",
+    "unit_title": "Fruits We Love: Colours and Tastes",
+    "screen_number": 3,
+    "block_type": "paragraph",
+    "expected_text": "We share fruits. We say, \"Let us eat together!\"",
+    "visual_description": "Three children sitting under a tree, sharing slices of mango, banana, and orange. They are happy and talking together.",
+    "audio_instruction": "Say 'Let us eat together!' Can you share with a friend?"
+  }
+]

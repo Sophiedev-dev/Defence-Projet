@@ -1,0 +1,43 @@
+{
+  "hash": "859de91c",
+  "configHash": "4fb625ce",
+  "lockfileHash": "24555cfb",
+  "browserHash": "abb7d9c9",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "56bed418",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "ed45e1c0",
+      "needsInterop": true
+    },
+    "firebase/firestore": {
+      "src": "../../node_modules/firebase/firestore/dist/esm/index.esm.js",
+      "file": "firebase_firestore.js",
+      "fileHash": "08cb4859",
+      "needsInterop": false
+    },
+    "firebase/app": {
+      "src": "../../node_modules/firebase/app/dist/esm/index.esm.js",
+      "file": "firebase_app.js",
+      "fileHash": "5ad980ba",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-JG632Q77": {
+      "file": "chunk-JG632Q77.js"
+    },
+    "chunk-M266FUAD": {
+      "file": "chunk-M266FUAD.js"
+    },
+    "chunk-Q4AC2O6Z": {
+      "file": "chunk-Q4AC2O6Z.js"
+    }
+  }
+}

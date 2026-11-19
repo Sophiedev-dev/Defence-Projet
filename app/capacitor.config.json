@@ -1,0 +1,8 @@
+{
+  "appId": "com.cosmoslearning.lectureguidee",
+  "appName": "Lecture guidée",
+  "webDir": "dist",
+  "android": {
+    "allowMixedContent": true
+  }
+}

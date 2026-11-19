@@ -18,6 +18,9 @@ visible sur le réseau local pour tester sur la tablette.
 
 > Le micro du navigateur ne fonctionne qu'en `localhost` ou en `https`.
 
+**Sur téléphone Android** : voir [ANDROID.md](ANDROID.md) (Capacitor, APK,
+adresse du serveur, pare-feu).
+
 ## Écrans
 
 | Écran | Fichier | Inspiré de |

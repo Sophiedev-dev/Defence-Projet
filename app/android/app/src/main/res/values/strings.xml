@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Lecture guidée</string>
+    <string name="title_activity_main">Lecture guidée</string>
+    <string name="package_name">com.cosmoslearning.lectureguidee</string>
+    <string name="custom_url_scheme">com.cosmoslearning.lectureguidee</string>
+</resources>

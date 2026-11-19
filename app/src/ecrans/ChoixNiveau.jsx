@@ -3,7 +3,8 @@ import { parler } from '../audio'
 
 // Écran « Choix du niveau » (inspiré de E2 « Qui lit aujourd'hui ? ») :
 // une grande carte par niveau, avec une pastille de couleur et un symbole.
-export default function ChoixNiveau({ niveaux, onChoisir }) {
+// Le cadenas discret en bas à droite ouvre les réglages (adresse du serveur).
+export default function ChoixNiveau({ niveaux, onChoisir, onReglages }) {
   return (
     <div style={{ position: 'absolute', inset: 0, padding: '56px 72px 40px', display: 'flex', flexDirection: 'column' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 20 }}>
@@ -31,6 +32,10 @@ export default function ChoixNiveau({ niveaux, onChoisir }) {
           )
         })}
       </div>
+
+      <button onClick={onReglages} title="Réglages" style={{ position: 'absolute', right: 28, bottom: 24, width: 48, height: 48, borderRadius: 12, border: 'none', background: 'transparent', color: '#A9A08C', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><rect x="5" y="11" width="14" height="10" rx="2" /><path d="M8 11V7a4 4 0 018 0v4" /></svg>
+      </button>
     </div>
   )
 }

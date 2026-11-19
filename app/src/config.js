@@ -1,9 +1,31 @@
 // Réglages de l'évaluation de la prononciation.
 // Modifier ces valeurs ici suffit : aucun autre fichier n'est à toucher.
 
-// Adresse du serveur OpenPronounce. Peut être remplacée dans .env.local par
-// VITE_OPENPRONOUNCE_URL (par ex. l'adresse IP du PC si l'appli tourne sur la tablette).
-export const SERVEUR_OPENPRONOUNCE = import.meta.env.VITE_OPENPRONOUNCE_URL || 'http://localhost:8000'
+// Adresse du serveur OpenPronounce : l'adresse IP du PC sur le Wi-Fi.
+// Elle se change dans l'appli (écran Réglages, cadenas en bas à droite du
+// choix du niveau) et reste enregistrée sur l'appareil.
+// Valeur de départ : VITE_OPENPRONOUNCE_URL dans .env.local, sinon celle-ci.
+const ADRESSE_PAR_DEFAUT = import.meta.env.VITE_OPENPRONOUNCE_URL || 'http://192.168.1.20:8000'
+const CLE_ADRESSE = 'adresseServeurOpenPronounce'
+
+export function lireAdresseServeur() {
+  try {
+    return localStorage.getItem(CLE_ADRESSE) || ADRESSE_PAR_DEFAUT
+  } catch {
+    return ADRESSE_PAR_DEFAUT
+  }
+}
+
+// Enregistre l'adresse (sans « / » final, pour pouvoir y ajouter « /tts » etc.).
+export function enregistrerAdresseServeur(adresse) {
+  const propre = adresse.trim().replace(/\/+$/, '')
+  try {
+    localStorage.setItem(CLE_ADRESSE, propre)
+  } catch {
+    /* stockage indisponible : l'adresse ne sera pas gardée */
+  }
+  return propre
+}
 
 // Langue envoyée au serveur (champ « lang »).
 export const LANGUE = 'en'

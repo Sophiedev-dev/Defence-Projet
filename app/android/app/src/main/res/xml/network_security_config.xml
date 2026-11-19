@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Autorise les connexions http (non chiffrées) : le serveur OpenPronounce
+  tourne sur un PC du réseau local (ex. http://192.168.1.20:8000) sans https.
+  Firebase, lui, reste en https.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

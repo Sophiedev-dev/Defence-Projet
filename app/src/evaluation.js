@@ -1,6 +1,6 @@
 // Évaluation de la prononciation avec le serveur OpenPronounce.
 import {
-  SERVEUR_OPENPRONOUNCE, LANGUE, SEUIL_PRESQUE,
+  lireAdresseServeur, LANGUE, SEUIL_PRESQUE,
   SCORE_TROIS_ETOILES, SCORE_DEUX_ETOILES, DELAI_MAX_SERVEUR_MS,
 } from './config'
 
@@ -77,7 +77,7 @@ export function etoilesDuScore(score) {
 
 // fetch avec délai maximum : au-delà, on considère que le serveur ne répond pas.
 async function appeler(chemin, formulaire) {
-  const res = await fetch(SERVEUR_OPENPRONOUNCE + chemin, {
+  const res = await fetch(lireAdresseServeur() + chemin, {
     method: 'POST',
     body: formulaire,
     signal: AbortSignal.timeout(DELAI_MAX_SERVEUR_MS),
@@ -91,6 +91,16 @@ function nomFichier(blob) {
   if (blob.type.includes('mp4')) return 'lecture.m4a'
   if (blob.type.includes('ogg')) return 'lecture.ogg'
   return 'lecture.webm'
+}
+
+// Vérifie que le serveur répond à l'adresse donnée (route /health). Renvoie true ou false.
+export async function serveurJoignable(adresse) {
+  try {
+    const res = await fetch(adresse + '/health', { signal: AbortSignal.timeout(5000) })
+    return res.ok
+  } catch {
+    return false
+  }
 }
 
 // Envoie un enregistrement et le texte attendu ; renvoie la réponse du serveur

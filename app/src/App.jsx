@@ -7,12 +7,14 @@ import ChoixNiveau from './ecrans/ChoixNiveau'
 import ChoixMatiere from './ecrans/ChoixMatiere'
 import ListeUnites from './ecrans/ListeUnites'
 import Activite from './ecrans/Activite'
+import Reglages from './ecrans/Reglages'
 import { chargerNiveaux, chargerUnites, grouperParMatiere } from './donnees'
 import { configOk } from './firebase'
 import { arreterSon } from './audio'
 
 // Navigation de l'application (sans routeur, un simple état « ecran ») :
 //   demarrage → niveau → matiere → unites → activite
+//                 └→ reglages (cadenas)
 export default function App() {
   const [ecran, setEcran] = useState('demarrage')
   const [erreur, setErreur] = useState(null)       // message affiché par l'écran Erreur
@@ -77,7 +79,9 @@ export default function App() {
   } else if (ecran === 'demarrage') {
     contenu = <Demarrage />
   } else if (ecran === 'niveau') {
-    contenu = <ChoixNiveau niveaux={niveaux} onChoisir={choisirNiveau} />
+    contenu = <ChoixNiveau niveaux={niveaux} onChoisir={choisirNiveau} onReglages={() => aller('reglages')} />
+  } else if (ecran === 'reglages') {
+    contenu = <Reglages onRetour={() => aller('niveau')} />
   } else if (ecran === 'matiere') {
     contenu = (
       <ChoixMatiere
